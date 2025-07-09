@@ -141,10 +141,11 @@
 
         /* Services Grid */
         .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 2rem;
             margin-top: 3rem;
+            justify-content: center;
         }
 
         .service-card {
@@ -154,6 +155,9 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid #f0f0f0;
+            flex: 0 0 320px;
+            min-width: 320px;
+            max-width: 380px;
         }
 
         .service-card:hover {
