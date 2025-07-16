@@ -12,234 +12,265 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.47059;
+            color: #1d1d1f;
+            background: #ffffff;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1024px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 22px;
         }
 
         /* Header */
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            padding: 12px 0;
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 21px;
+            font-weight: 600;
+            color: #1d1d1f;
+            letter-spacing: -0.022em;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 32px;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
+            color: #1d1d1f;
+            font-size: 17px;
+            font-weight: 400;
             transition: color 0.3s ease;
+            letter-spacing: -0.022em;
         }
 
         .nav-links a:hover {
-            color: #667eea;
+            color: #0071e3;
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 18px;
+            color: #1d1d1f;
+            cursor: pointer;
         }
 
         /* Hero Section */
         .hero {
-            padding: 120px 0 80px;
+            padding: 120px 0 100px;
             text-align: center;
-            color: white;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+            background: #fbfbfd;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 56px;
+            font-weight: 600;
+            color: #1d1d1f;
+            letter-spacing: -0.005em;
+            line-height: 1.07143;
+            margin-bottom: 6px;
+        }
+
+        .hero-subtitle {
+            font-size: 28px;
+            font-weight: 400;
+            color: #1d1d1f;
+            letter-spacing: 0.004em;
+            line-height: 1.14286;
+            margin-bottom: 19px;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
+            font-size: 21px;
+            color: #86868b;
+            margin-bottom: 30px;
+            max-width: 734px;
             margin-left: auto;
             margin-right: auto;
+            letter-spacing: 0.011em;
+            line-height: 1.381;
         }
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            background: #0071e3;
             color: white;
-            padding: 15px 30px;
+            padding: 12px 23px;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
+            border-radius: 980px;
+            font-weight: 400;
+            font-size: 17px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            letter-spacing: -0.022em;
+            border: none;
+            cursor: pointer;
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+            background: #0077ed;
         }
 
         /* Main Content */
         .main-content {
             background: white;
-            padding: 80px 0;
         }
 
         .section {
-            margin-bottom: 80px;
+            padding: 100px 0;
+        }
+
+        .section:nth-child(even) {
+            background: #f5f5f7;
         }
 
         .section h2 {
-            font-size: 2.5rem;
+            font-size: 48px;
+            font-weight: 600;
             text-align: center;
-            margin-bottom: 3rem;
-            color: #333;
-            position: relative;
+            margin-bottom: 14px;
+            color: #1d1d1f;
+            letter-spacing: -0.003em;
+            line-height: 1.08349;
         }
 
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+        .section-subtitle {
+            font-size: 21px;
+            color: #86868b;
+            text-align: center;
+            margin-bottom: 68px;
+            letter-spacing: 0.011em;
         }
 
         /* Services Grid */
         .services-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 40px;
+            margin-top: 68px;
             justify-content: center;
         }
 
         .service-card {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #f0f0f0;
+            padding: 40px 32px;
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #d2d2d7;
             flex: 0 0 320px;
             min-width: 320px;
             max-width: 380px;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         .service-card h3 {
-            color: #667eea;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
+            color: #1d1d1f;
+            margin-bottom: 14px;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 0.009em;
         }
 
         .service-card ul {
             list-style: none;
-            margin-bottom: 1.5rem;
         }
 
         .service-card ul li {
-            padding: 0.5rem 0;
+            padding: 8px 0;
             position: relative;
-            padding-left: 20px;
+            padding-left: 24px;
+            font-size: 17px;
+            color: #1d1d1f;
+            letter-spacing: -0.022em;
         }
 
         .service-card ul li::before {
             content: '✓';
             position: absolute;
             left: 0;
-            color: #4CAF50;
-            font-weight: bold;
+            color: #30d158;
+            font-weight: 600;
+            font-size: 16px;
         }
 
         /* Pricing Cards */
         .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 68px;
+            justify-content: center;
         }
 
         .pricing-card {
             background: white;
-            padding: 2.5rem 2rem;
-            border-radius: 20px;
+            padding: 48px 32px;
+            border-radius: 18px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #d2d2d7;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-        }
-
-        .pricing-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            flex: 0 0 250px;
+            min-width: 250px;
         }
 
         .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         .pricing-card.featured {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: #1d1d1f;
             color: white;
-            transform: scale(1.05);
+            border-color: #1d1d1f;
         }
 
         .pricing-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.004em;
+        }
+
+        .pricing-card.featured h3 {
+            color: white;
         }
 
         .price {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: #667eea;
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #1d1d1f;
+            letter-spacing: -0.003em;
         }
 
         .pricing-card.featured .price {
@@ -247,78 +278,77 @@
         }
 
         .accounts {
-            font-size: 1.1rem;
-            opacity: 0.8;
-            margin-bottom: 1rem;
+            font-size: 19px;
+            color: #86868b;
+            margin-bottom: 24px;
+            letter-spacing: 0.012em;
+        }
+
+        .pricing-card.featured .accounts {
+            color: #a1a1a6;
         }
 
         .first-month-free {
-            background: linear-gradient(45deg, #4CAF50, #45a049);
+            background: #30d158;
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            padding: 8px 16px;
+            border-radius: 980px;
+            font-size: 14px;
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 32px;
             display: inline-block;
-            animation: pulse 2s infinite;
+            letter-spacing: -0.016em;
         }
 
         .pricing-card.featured .first-month-free {
-            background: linear-gradient(45deg, #4CAF50, #45a049);
+            background: #30d158;
         }
 
         /* Bundle Section */
         .bundle-offer {
             display: flex;
             justify-content: center;
-            margin-top: 3rem;
+            margin-top: 68px;
         }
 
         .bundle-card {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: #1d1d1f;
             color: white;
-            padding: 3rem 2.5rem;
-            border-radius: 20px;
+            padding: 48px 40px;
+            border-radius: 18px;
             text-align: center;
-            max-width: 500px;
+            max-width: 600px;
             position: relative;
-            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
-            transform: scale(1.02);
         }
 
         .bundle-badge {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            background: #ff3b30;
             color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 25px;
-            font-size: 0.9rem;
+            padding: 8px 16px;
+            border-radius: 980px;
+            font-size: 14px;
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 24px;
             display: inline-block;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+            letter-spacing: -0.016em;
         }
 
         .bundle-card h3 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: 0.004em;
         }
 
         .bundle-details {
-            margin-bottom: 2rem;
+            margin-bottom: 32px;
         }
 
         .bundle-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            padding: 16px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
 
@@ -327,147 +357,160 @@
         }
 
         .bundle-label {
-            font-size: 1.1rem;
-            font-weight: 500;
+            font-size: 19px;
+            font-weight: 400;
+            letter-spacing: 0.012em;
         }
 
         .bundle-price {
-            font-size: 1.2rem;
+            font-size: 21px;
             font-weight: 600;
-        }
-
-        .original-price {
-            text-decoration: line-through;
-            opacity: 0.7;
-            margin-right: 10px;
+            letter-spacing: 0.011em;
         }
 
         .old-price {
             text-decoration: line-through;
             opacity: 0.6;
-            font-size: 0.9rem;
+            font-size: 17px;
             margin-right: 8px;
             color: rgba(255, 255, 255, 0.6);
         }
 
         .new-price {
-            color: #4CAF50;
-            font-weight: 700;
+            color: #30d158;
+            font-weight: 600;
         }
 
         .free-price {
-            color: #4CAF50;
-            font-size: 1.4rem;
+            color: #30d158;
+            font-size: 21px;
+            font-weight: 600;
         }
 
         .bundle-total {
             background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            border-radius: 15px;
-            margin: 2rem 0;
+            padding: 24px;
+            border-radius: 12px;
+            margin: 32px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .total-label {
-            font-size: 1.3rem;
-            font-weight: 600;
+            font-size: 21px;
+            font-weight: 400;
+            letter-spacing: 0.011em;
         }
 
         .total-price {
-            font-size: 2.5rem;
-            font-weight: bold;
+            font-size: 40px;
+            font-weight: 600;
+            letter-spacing: -0.003em;
         }
 
         .bundle-savings {
-            color: #4CAF50;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
+            color: #30d158;
+            font-size: 19px;
+            font-weight: 400;
+            margin-bottom: 32px;
+            letter-spacing: 0.012em;
         }
 
         .bundle-cta {
             background: white;
-            color: #667eea;
-            font-size: 1.2rem;
-            padding: 15px 40px;
-            margin-bottom: 1.5rem;
+            color: #1d1d1f;
+            font-size: 17px;
+            padding: 12px 23px;
+            margin-bottom: 24px;
         }
 
         .bundle-cta:hover {
-            background: #f8f9fa;
-            color: #764ba2;
+            background: #f5f5f7;
         }
 
         .bundle-note {
-            font-size: 0.95rem;
-            opacity: 0.9;
-            font-style: italic;
+            font-size: 17px;
+            opacity: 0.8;
+            font-style: normal;
+            color: #a1a1a6;
+            letter-spacing: -0.022em;
         }
 
         /* Add-ons Section */
         .addons-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 68px;
+            justify-content: center;
         }
 
         .addon-card {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #007aff 0%, #5856d6 100%);
             color: white;
-            padding: 2rem;
-            border-radius: 15px;
+            padding: 40px 32px;
+            border-radius: 18px;
             text-align: center;
             transition: transform 0.3s ease;
+            flex: 0 0 300px;
+            min-width: 300px;
         }
 
         .addon-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
         }
 
         .addon-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: 0.009em;
         }
 
         .addon-price {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: -0.003em;
+        }
+
+        .addon-card p {
+            font-size: 17px;
+            opacity: 0.9;
+            letter-spacing: -0.022em;
         }
 
         /* Consultation Section */
         .consultation {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 60px 0;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            padding: 100px 0;
             text-align: center;
-            margin: 80px 0;
-            border-radius: 20px;
         }
 
         .consultation h2 {
-            color: white;
-            margin-bottom: 2rem;
+            color: #1d1d1f;
+            margin-bottom: 14px;
         }
 
-        .consultation h2::after {
-            background: white;
+        .consultation p {
+            font-size: 21px;
+            color: #86868b;
+            margin-bottom: 48px;
+            letter-spacing: 0.011em;
         }
 
         /* Google Form Container */
         .google-form-container {
             max-width: 700px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: white;
+            padding: 32px;
+            border-radius: 18px;
+            border: 1px solid #d2d2d7;
             overflow: hidden;
-            height: 600px; /* Fixed height for scrolling */
+            height: 600px;
         }
 
         .google-form-container iframe {
@@ -475,37 +518,35 @@
             max-width: 640px;
             height: 100%;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             background: white;
             overflow-y: auto;
         }
 
-        .hidden {
-            display: none;
-        }
-
         /* Footer */
         footer {
-            background: #333;
-            color: white;
+            background: #f5f5f7;
+            color: #86868b;
             text-align: center;
-            padding: 40px 0;
+            padding: 48px 0;
+            border-top: 1px solid #d2d2d7;
         }
 
-        /* Mobile Navigation */
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #333;
-            cursor: pointer;
+        footer p {
+            font-size: 12px;
+            letter-spacing: -0.01em;
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 1068px) {
             .container {
-                padding: 0 15px;
+                padding: 0 40px;
+            }
+        }
+
+        @media (max-width: 834px) {
+            .container {
+                padding: 0 22px;
             }
 
             /* Navigation */
@@ -519,12 +560,12 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(10px);
+                background: rgba(255, 255, 255, 0.9);
+                backdrop-filter: saturate(180%) blur(20px);
                 flex-direction: column;
                 gap: 0;
-                padding: 1rem 0;
-                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+                padding: 22px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             }
 
             .nav-links.active {
@@ -533,176 +574,171 @@
 
             .nav-links li {
                 text-align: center;
-                padding: 0.5rem 0;
+                padding: 11px 0;
             }
 
             .nav-links a {
                 display: block;
-                padding: 0.5rem 1rem;
+                padding: 11px 22px;
             }
 
             /* Hero Section */
             .hero {
-                padding: 100px 0 60px;
+                padding: 100px 0 80px;
             }
 
             .hero h1 {
-                font-size: 2.2rem;
-                line-height: 1.2;
-                margin-bottom: 1.5rem;
+                font-size: 40px;
+                line-height: 1.1;
+                margin-bottom: 6px;
+            }
+
+            .hero-subtitle {
+                font-size: 24px;
+                margin-bottom: 19px;
             }
 
             .hero p {
-                font-size: 1.1rem;
-                margin-bottom: 2rem;
-                padding: 0 1rem;
+                font-size: 19px;
+                margin-bottom: 29px;
             }
 
-            .cta-button {
-                padding: 12px 25px;
-                font-size: 1rem;
-            }
-
-            /* Main Content */
-            .main-content {
-                padding: 60px 0;
-            }
-
+            /* Sections */
             .section {
-                margin-bottom: 60px;
+                padding: 80px 0;
             }
 
             .section h2 {
-                font-size: 2rem;
-                margin-bottom: 2rem;
+                font-size: 32px;
+                margin-bottom: 14px;
+            }
+
+            .section-subtitle {
+                font-size: 19px;
+                margin-bottom: 48px;
             }
 
             /* Services Grid */
             .services-grid,
             .pricing-grid,
             .addons-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
             }
 
             .service-card,
             .addon-card {
-                padding: 1.5rem;
+                padding: 32px 24px;
+                max-width: 100%;
+                width: 100%;
             }
 
             /* Pricing Cards */
             .pricing-card {
-                padding: 2rem 1.5rem;
-                margin-bottom: 1rem;
-            }
-
-            .pricing-card.featured {
-                transform: none;
-                margin-bottom: 1rem;
+                padding: 40px 24px;
+                width: 100%;
+                max-width: 100%;
             }
 
             .price {
-                font-size: 2.5rem;
+                font-size: 40px;
             }
 
             /* Bundle Section */
             .bundle-card {
-                padding: 2rem 1.5rem;
-                margin: 0 1rem;
+                padding: 40px 32px;
+                margin: 0;
+                max-width: 100%;
             }
 
             .bundle-card h3 {
-                font-size: 1.5rem;
+                font-size: 28px;
             }
 
             .bundle-item {
                 flex-direction: column;
                 text-align: left;
-                gap: 0.5rem;
-                padding: 0.75rem 0;
+                gap: 8px;
+                padding: 16px 0;
             }
 
             .bundle-total {
                 flex-direction: column;
-                gap: 0.5rem;
+                gap: 8px;
                 text-align: center;
             }
 
             .total-price {
-                font-size: 2rem;
+                font-size: 32px;
             }
 
             /* Consultation Section */
             .consultation {
-                margin: 60px 0;
-                padding: 40px 0;
+                padding: 80px 0;
             }
 
             .consultation h2 {
-                font-size: 2rem;
+                font-size: 32px;
+            }
+
+            .consultation p {
+                font-size: 19px;
             }
 
             .google-form-container {
-                margin: 0 1rem;
-                padding: 1rem;
-                height: 500px; /* Smaller height for mobile */
-            }
-
-            .google-form-container iframe {
-                width: 100%;
-                height: 100%;
-            }
-
-            /* Addon Cards */
-            .addon-card h3 {
-                font-size: 1.3rem;
-            }
-
-            .addon-price {
-                font-size: 2rem;
+                margin: 0;
+                padding: 24px;
+                height: 500px;
             }
         }
 
         /* Smaller Mobile Devices */
-        @media (max-width: 480px) {
+        @media (max-width: 428px) {
+            .container {
+                padding: 0 16px;
+            }
+
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 32px;
+            }
+
+            .hero-subtitle {
+                font-size: 21px;
             }
 
             .hero p {
-                font-size: 1rem;
+                font-size: 17px;
             }
 
             .section h2 {
-                font-size: 1.75rem;
+                font-size: 28px;
+            }
+
+            .section-subtitle {
+                font-size: 17px;
             }
 
             .price {
-                font-size: 2.2rem;
+                font-size: 32px;
             }
 
             .bundle-card {
-                margin: 0 0.5rem;
-                padding: 1.5rem 1rem;
+                padding: 32px 24px;
             }
 
             .google-form-container {
-                margin: 0 0.5rem;
-                padding: 0.75rem;
-                height: 450px; /* Even more compact for very small screens */
-            }
-
-            .google-form-container iframe {
-                height: 100%;
-            }
-
-            .pricing-card {
-                padding: 1.5rem 1rem;
+                padding: 16px;
+                height: 450px;
             }
 
             .service-card,
             .addon-card {
-                padding: 1.25rem;
+                padding: 24px 20px;
+            }
+
+            .pricing-card {
+                padding: 32px 20px;
             }
         }
 
@@ -715,27 +751,9 @@
             }
 
             .cta-button:hover,
-            .form-submit:hover {
+            .bundle-cta:hover {
                 transform: none;
             }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .service-card,
-        .pricing-card,
-        .addon-card {
-            animation: fadeInUp 0.6s ease forwards;
         }
     </style>
 </head>
@@ -756,7 +774,8 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Accounting & Bookkeeping Solutions Made Simple</h1>
+            <h1>Ledgerly</h1>
+            <div class="hero-subtitle">Accounting & Bookkeeping Solutions Made Simple</div>
             <p>Streamline your finances with our comprehensive subscription-based bookkeeping services. Focus on growing your business while we handle your books.</p>
             <a href="#consultation" class="cta-button">Get Free Consultation</a>
         </div>
@@ -766,6 +785,7 @@
         <div class="container">
             <section id="services" class="section">
                 <h2>What's Included in Every Subscription</h2>
+                <p class="section-subtitle">Professional bookkeeping services designed to keep your business organized and compliant.</p>
                 <div class="services-grid">
                     <div class="service-card">
                         <h3>Monthly Bookkeeping</h3>
@@ -808,6 +828,7 @@
 
             <section id="pricing" class="section">
                 <h2>Monthly Subscription Pricing</h2>
+                <p class="section-subtitle">Choose the plan that fits your business needs. All plans include our core services.</p>
                 <div class="pricing-grid">
                     <div class="pricing-card">
                         <h3>Starter</h3>
@@ -842,6 +863,7 @@
 
             <section id="bundle" class="section">
                 <h2>Special Launch Bundle</h2>
+                <p class="section-subtitle">Get everything you need to start your business bookkeeping the right way.</p>
                 <div class="bundle-offer">
                     <div class="bundle-card">
                         <div class="bundle-badge">Limited Time Offer</div>
@@ -879,6 +901,7 @@
 
             <section id="addons" class="section">
                 <h2>Professional Add-On Services</h2>
+                <p class="section-subtitle">Enhance your bookkeeping with our specialized services.</p>
                 <div class="addons-grid">
                     <div class="addon-card">
                         <h3>QuickBooks Setup</h3>
@@ -903,7 +926,7 @@
     <section id="consultation" class="consultation">
         <div class="container">
             <h2>Start with a Free Consultation</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Get a 30-minute consultation to discuss your bookkeeping needs and find the perfect solution for your business.</p>
+            <p>Get a 30-minute consultation to discuss your bookkeeping needs and find the perfect solution for your business.</p>
             
             <div class="google-form-container">
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeMFxR_8cmlQ84uKy0Yi4IkmEwEC3SIJkQcQdyvXVm73sGKeA/viewform?embedded=true" width="640" height="2335" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
